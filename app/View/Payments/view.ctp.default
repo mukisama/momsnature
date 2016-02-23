@@ -1,0 +1,49 @@
+<div class="payments view">
+<h2><?php echo __('Payment'); ?></h2>
+	<dl>
+		<dt><?php echo __('Id'); ?></dt>
+		<dd>
+			<?php echo h($payment['Payment']['id']); ?>
+			&nbsp;
+		</dd>
+		<dt><?php echo __('Transaction Number'); ?></dt>
+		<dd>
+			<?php echo h($payment['Payment']['transaction_number']); ?>
+			&nbsp;
+		</dd>
+		<dt><?php echo __('Receipt Number'); ?></dt>
+		<dd>
+			<?php echo h($payment['Payment']['receipt_number']); ?>
+			&nbsp;
+		</dd>
+		<dt><?php echo __('Method'); ?></dt>
+		<dd>
+			<?php echo h($payment['Payment']['method']); ?>
+			&nbsp;
+		</dd>
+		<dt><?php echo __('Copy'); ?></dt>
+		<dd>
+			<?php echo h($payment['Payment']['copy']); ?>
+			&nbsp;
+		</dd>
+		<dt><?php echo __('Remarks'); ?></dt>
+		<dd>
+			<?php echo h($payment['Payment']['remarks']); ?>
+			&nbsp;
+		</dd>
+		<dt><?php echo __('Created On'); ?></dt>
+		<dd>
+			<?php echo h($payment['Payment']['created_on']); ?>
+			&nbsp;
+		</dd>
+	</dl>
+</div>
+<div class="actions">
+	<h3><?php echo __('Actions'); ?></h3>
+	<ul>
+		<li><?php echo $this->Html->link(__('Edit Payment'), array('action' => 'edit', $payment['Payment']['id'])); ?> </li>
+		<li><?php echo $this->Form->postLink(__('Delete Payment'), array('action' => 'delete', $payment['Payment']['id']), array('confirm' => __('Are you sure you want to delete # %s?', $payment['Payment']['id']))); ?> </li>
+		<li><?php echo $this->Html->link(__('List Payments'), array('action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('New Payment'), array('action' => 'add')); ?> </li>
+	</ul>
+</div>
